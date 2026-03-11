@@ -13,6 +13,7 @@ if (projectForm) {
         const formData = new FormData(projectForm);
         const name = formData.get('name');
         const email = formData.get('email');
+        const phone = formData.get('phone');
         const company = formData.get('company');
         const budget = formData.get('budget');
         const timeline = formData.get('timeline');
@@ -41,6 +42,7 @@ if (projectForm) {
             await addDoc(collection(db, "project_requests"), {
                 name,
                 email,
+                phone,
                 company,
                 services,
                 budget,

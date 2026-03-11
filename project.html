@@ -12,9 +12,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -91,7 +93,8 @@
         <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
                 <img src="Company%20Logo.png" alt="LeadBryte Logo"
-                    class="h-20 md:h-24 w-auto object-contain transition-all duration-300">
+                    class="h-20 md:h-24 w-auto object-contain transition-all duration-300"
+                    width="200" height="80" decoding="async">
             </a>
             <a href="index.html"
                 class="text-slate-light hover:text-white transition-colors text-sm font-medium flex items-center gap-2 group">
@@ -148,6 +151,14 @@
                             <input type="email" id="email" name="email" required
                                 class="glass-input w-full px-4 py-3 rounded-xl text-white placeholder-slate-500"
                                 placeholder="Enter Email Address">
+                        </div>
+                        <div class="group">
+                            <label for="phone"
+                                class="block text-sm font-medium text-slate-light mb-2 group-focus-within:text-electric transition-colors">Phone
+                                Number</label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="glass-input w-full px-4 py-3 rounded-xl text-white placeholder-slate-500"
+                                placeholder="e.g. +233 24 123 4567">
                         </div>
                         <div class="group md:col-span-2">
                             <label for="company"

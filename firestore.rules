@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow public write to project_requests, but no read
+    match /project_requests/{docId} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+
+    // Allow public write to newsletter_subscribers, but no read
+    match /newsletter_subscribers/{docId} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+
+    // Allow public write to contact_messages, but no read
+    match /contact_messages/{docId} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+
+    // Deny everything else by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
