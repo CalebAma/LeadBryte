@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About LeadBryte Solutions</title>
+    <meta name="description"
+        content="Learn about LeadBryte Solutions, our mission, vision, and the values that drive our commitment to excellence in IT.">
+    <link rel="icon" type="image/png" href="Company Logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0F172A',
+                            light: '#1e293b',
+                            dark: '#020617',
+                        },
+                        electric: {
+                            DEFAULT: '#3B82F6',
+                            hover: '#2563EB',
+                        },
+                        slate: {
+                            DEFAULT: '#64748b',
+                            light: '#94a3b8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        header: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-navy text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 top-0">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="Company%20Logo.png" alt="LeadBryte Logo"
+                    class="h-20 md:h-24 w-auto object-contain transition-all duration-300">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="services.html"
+                    class="text-slate-light hover:text-white transition-colors text-sm font-medium">Services</a>
+                <a href="about.html" class="text-white font-medium border-b-2 border-electric pb-1">About</a>
+                <a href="team.html"
+                    class="text-slate-light hover:text-white transition-colors text-sm font-medium">Team</a>
+                <a href="project.html"
+                    class="bg-electric hover:bg-electric-hover text-white px-6 py-2 rounded-xl font-medium transition-all shadow-lg hover:shadow-electric/50 transform hover:-translate-y-0.5">
+                    Start a Project
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-navy/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+            <a href="services.html"
+                class="text-2xl font-header font-bold hover:text-electric transition-colors mobile-link">Services</a>
+            <a href="about.html"
+                class="text-2xl font-header font-bold text-electric transition-colors mobile-link">About</a>
+            <a href="team.html"
+                class="text-2xl font-header font-bold hover:text-electric transition-colors mobile-link">Team</a>
+            <a href="project.html"
+                class="bg-electric text-white px-8 py-3 rounded-xl text-xl font-bold mobile-link">Start a Project</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-16 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-navy-light to-navy"></div>
+        <div class="container mx-auto px-6 lg:px-12 text-center relative z-10">
+            <div
+                class="inline-block px-4 py-1.5 rounded-full border border-electric/30 bg-electric/10 text-electric text-sm font-semibold mb-6 reveal">
+                Be Smart, Think Different
+            </div>
+            <div class="container mx-auto px-6 lg:px-12 text-center">
+                <h1 class="font-header text-4xl md:text-5xl font-bold mb-4 reveal">Who We Are</h1>
+                <p
+                    class="text-slate-light max-w-2xl mx-auto reveal animate-in slide-in-from-bottom duration-700 delay-100">
+                    Building the digital foundation for tomorrow's businesses today.
+                </p>
+            </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto space-y-20">
+                <div class="reveal">
+                    <h2 class="text-2xl font-header font-bold mb-6 text-electric">Our Mission</h2>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        At LeadBryte Solutions, our mission is to empower businesses by providing robust, scalable, and
+                        secure IT infrastructure. We bridge the gap between complex technology and business goals,
+                        ensuring our clients can focus on growth while we handle the digital foundation.
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <h2 class="text-2xl font-header font-bold mb-6 text-electric">Why Choose Us?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h3 class="font-bold text-xl mb-3">Expertise</h3>
+                            <p class="text-slate-light">Our team comprises industry veterans with deep knowledge in
+                                network engineering, software development, and cybersecurity.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h3 class="font-bold text-xl mb-3">Innovation</h3>
+                            <p class="text-slate-light">We stay ahead of the curve, implementing the latest technologies
+                                to give your business a competitive edge.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h3 class="font-bold text-xl mb-3">Reliability</h3>
+                            <p class="text-slate-light">We build systems that are dependable and secure, minimizing
+                                downtime and maximizing productivity.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h3 class="font-bold text-xl mb-3">Partnership</h3>
+                            <p class="text-slate-light">We view ourselves as your long-term technology partners,
+                                committed to your sustained success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark py-12 border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <img src="Company%20Logo.png" alt="LeadBryte Logo" class="h-20 w-auto object-contain">
+                    </a>
+                    <p class="text-slate-light max-w-sm">
+                        Be Smart, Think Different. Empowering businesses through innovative technology
+                        solutions and expert consulting.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-slate-light text-sm">
+                        <li><a href="services.html" class="hover:text-electric transition-colors">Services</a></li>
+                        <li><a href="about.html" class="hover:text-electric transition-colors">About Us</a></li>
+                        <li><a href="team.html" class="hover:text-electric transition-colors">Team</a></li>
+                        <li><a href="project.html" class="hover:text-electric transition-colors">Start a Project</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-slate-light text-sm">
+                        <li><a href="#" class="hover:text-electric transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-electric transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-electric transition-colors">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-light">
+                <p>&copy; 2026 LeadBryte Solutions. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container">
+        <!-- Chat Window -->
+        <div id="chat-window"
+            class="fixed bottom-24 right-6 w-80 md:w-96 bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 transform scale-0 origin-bottom-right h-[500px] z-[100]">
+            <!-- Header -->
+            <div class="bg-electric p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-sm">LeadBryte Assistant</h3>
+                        <p class="text-xs text-white/80">Online</p>
+                    </div>
+                </div>
+                <button id="close-chat" class="text-white hover:bg-white/10 rounded-lg p-1 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Messages Area -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 font-sans">
+                <!-- Bot Welcome Message -->
+                <div class="flex items-start gap-2 max-w-[85%]">
+                    <div
+                        class="w-8 h-8 bg-electric/20 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold text-electric">
+                        LB</div>
+                    <div class="bg-white/10 rounded-2xl rounded-tl-none p-3 text-sm text-slate-200">
+                        Hi there! 👋 I'm the LeadBryte virtual assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Area -->
+            <div class="p-4 border-t border-white/5 bg-navy/50">
+                <p class="text-xs text-center text-slate-500">Select an option above to chat</p>
+            </div>
+        </div>
+
+        <!-- Float Button -->
+        <button id="chatbot-toggle"
+            class="fixed bottom-6 right-6 w-14 h-14 bg-electric hover:bg-electric-hover text-white rounded-full shadow-lg shadow-electric/40 flex items-center justify-center transition-all hover:scale-110 active:scale-95 group z-[101]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 transition-transform group-hover:rotate-12"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

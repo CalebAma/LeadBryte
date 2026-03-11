@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - LeadBryte Solutions</title>
+    <meta name="description"
+        content="Explore our comprehensive IT solutions: Software Development, Network Setup, Cloud Migration, and more.">
+    <link rel="icon" type="image/png" href="Company Logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0F172A',
+                            light: '#1e293b',
+                            dark: '#020617',
+                        },
+                        electric: {
+                            DEFAULT: '#3B82F6',
+                            hover: '#2563EB',
+                        },
+                        slate: {
+                            DEFAULT: '#64748b',
+                            light: '#94a3b8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        header: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-navy text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 top-0">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="Company%20Logo.png" alt="LeadBryte Logo"
+                    class="h-20 md:h-24 w-auto object-contain transition-all duration-300">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="services.html" class="text-white font-medium border-b-2 border-electric pb-1">Services</a>
+                <a href="about.html"
+                    class="text-slate-light hover:text-white transition-colors text-sm font-medium">About</a>
+                <a href="team.html"
+                    class="text-slate-light hover:text-white transition-colors text-sm font-medium">Team</a>
+                <a href="project.html"
+                    class="bg-electric hover:bg-electric-hover text-white px-6 py-2 rounded-xl font-medium transition-all shadow-lg hover:shadow-electric/50 transform hover:-translate-y-0.5">
+                    Start a Project
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-navy/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+            <a href="services.html"
+                class="text-2xl font-header font-bold text-electric transition-colors mobile-link">Services</a>
+            <a href="about.html"
+                class="text-2xl font-header font-bold hover:text-electric transition-colors mobile-link">About</a>
+            <a href="team.html"
+                class="text-2xl font-header font-bold hover:text-electric transition-colors mobile-link">Team</a>
+            <a href="project.html"
+                class="bg-electric text-white px-8 py-3 rounded-xl text-xl font-bold mobile-link">Start a Project</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-48 pb-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full -z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-navy-light/50 to-navy"></div>
+            <div
+                class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-electric/10 rounded-full blur-[120px] animate-pulse">
+            </div>
+            <div class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-purple-600/10 rounded-full blur-[100px]"
+                style="animation-delay: 2s;"></div>
+        </div>
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <h1 class="font-header text-5xl md:text-6xl font-bold mb-6 reveal">Strategic Solutions</h1>
+            <p class="text-slate-light max-w-2xl mx-auto text-lg leading-relaxed reveal"
+                style="transition-delay: 100ms;">
+                We provide a comprehensive ecosystem of IT services designed to scale your business and secure your
+                digital future.
+            </p>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="pb-24">
+        <div class="container mx-auto px-6 lg:px-12">
+
+            <!-- Category 1: Infrastructure & Security -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10 reveal">
+                    <div class="h-1 w-12 bg-electric rounded-full"></div>
+                    <h2 class="font-header text-3xl font-bold uppercase tracking-wider text-slate-300">Infrastructure &
+                        Security</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Cybersecurity -->
+                    <div
+                        class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-electric/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] reveal">
+                        <div
+                            class="w-14 h-14 bg-electric/10 rounded-2xl flex items-center justify-center text-electric mb-6 group-hover:bg-electric group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-electric transition-colors">Cybersecurity
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Advanced threat detection,
+                            penetration testing, and 24/7 security monitoring to shield your assets.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-electric/20 transition-colors">
+                            <span class="text-xs font-bold text-electric uppercase tracking-widest">Network
+                                Protection</span>
+                        </div>
+                    </div>
+
+                    <!-- IT Infrastructure -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-electric/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] reveal"
+                        style="transition-delay: 100ms;">
+                        <div
+                            class="w-14 h-14 bg-electric/10 rounded-2xl flex items-center justify-center text-electric mb-6 group-hover:bg-electric group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-electric transition-colors">IT Infrastructure
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Scalable server setups,
+                            high-performance computing, and resilient network design.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-electric/20 transition-colors">
+                            <span class="text-xs font-bold text-electric uppercase tracking-widest">Core Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Migration -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-electric/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] reveal"
+                        style="transition-delay: 200ms;">
+                        <div
+                            class="w-14 h-14 bg-electric/10 rounded-2xl flex items-center justify-center text-electric mb-6 group-hover:bg-electric group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-electric transition-colors">Cloud Migration
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Seamless transition to AWS,
+                            Azure, or Google Cloud with zero downtime and optimized costs.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-electric/20 transition-colors">
+                            <span class="text-xs font-bold text-electric uppercase tracking-widest">Digital
+                                Transformation</span>
+                        </div>
+                    </div>
+
+                    <!-- CCTV & Surveillance -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-electric/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] reveal"
+                        style="transition-delay: 300ms;">
+                        <div
+                            class="w-14 h-14 bg-electric/10 rounded-2xl flex items-center justify-center text-electric mb-6 group-hover:bg-electric group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-electric transition-colors">CCTV &
+                            Surveillance</h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">High-definition AI-driven
+                            monitoring and integrated physical security systems.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-electric/20 transition-colors">
+                            <span class="text-xs font-bold text-electric uppercase tracking-widest">Physical
+                                Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Business Strategy & Analytics -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10 reveal">
+                    <div class="h-1 w-12 bg-purple-500 rounded-full"></div>
+                    <h2 class="font-header text-3xl font-bold uppercase tracking-wider text-slate-300">Strategy &
+                        Analytics</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Project Management -->
+                    <div
+                        class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] reveal">
+                        <div
+                            class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Project
+                            Management</h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Agile frameworks and
+                            certified methodologies to ensure project success from kick-off to completion.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-purple-500/20 transition-colors">
+                            <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Service
+                                Delivery</span>
+                        </div>
+                    </div>
+
+                    <!-- IT Consulting -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] reveal"
+                        style="transition-delay: 100ms;">
+                        <div
+                            class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">IT Consulting
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Strategic advisory to align
+                            IT with your growth objectives and long-term business vision.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-purple-500/20 transition-colors">
+                            <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Advisory</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Analytics -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] reveal"
+                        style="transition-delay: 200ms;">
+                        <div
+                            class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Data Analytics
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Business intelligence and
+                            predictive modeling to unlock the value hidden in your data.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-purple-500/20 transition-colors">
+                            <span
+                                class="text-xs font-bold text-purple-400 uppercase tracking-widest">Intelligence</span>
+                        </div>
+                    </div>
+
+                    <!-- Procurement -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] reveal"
+                        style="transition-delay: 300ms;">
+                        <div
+                            class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500 mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Procurement
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Global vendor network to
+                            source top-tier hardware and software at optimal pricing.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-purple-500/20 transition-colors">
+                            <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Sourcing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Development & Support -->
+            <div>
+                <div class="flex items-center gap-4 mb-10 reveal">
+                    <div class="h-1 w-12 bg-emerald-500 rounded-full"></div>
+                    <h2 class="font-header text-3xl font-bold uppercase tracking-wider text-slate-300">Dev & Support
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Software Development -->
+                    <div
+                        class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] reveal">
+                        <div
+                            class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 transform group-hover:scale-110">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">Software
+                            Development</h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Bespoke web and mobile
+                            applications using React, Node.js, and modern AI integrations.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-emerald-500/20 transition-colors">
+                            <span
+                                class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Engineering</span>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Services -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] reveal"
+                        style="transition-delay: 100ms;">
+                        <div
+                            class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 transform group-hover:scale-110">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">Hardware
+                            Services</h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Reliable hardware
+                            maintenance, repair, and field support for business equipment.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-emerald-500/20 transition-colors">
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Technical
+                                Support</span>
+                        </div>
+                    </div>
+
+                    <!-- Communication Services -->
+                    <div class="group h-full flex flex-col glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] reveal"
+                        style="transition-delay: 200ms;">
+                        <div
+                            class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 transform group-hover:scale-110">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-emerald-400 transition-colors">Communication
+                        </h3>
+                        <p class="text-slate-light text-sm leading-relaxed mb-6 flex-grow">Unified VoIP, secure
+                            conferencing tools, and omnichannel communication platforms.</p>
+                        <div class="pt-4 border-t border-white/5 group-hover:border-emerald-500/20 transition-colors">
+                            <span
+                                class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Connectivity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="glass-card rounded-[3rem] p-12 md:p-20 relative overflow-hidden reveal">
+                <!-- Decorative background -->
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-electric/5 to-transparent -z-10">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="font-header text-4xl md:text-5xl font-bold mb-8 leading-tight">Why Leading
+                            Enterprises <span class="text-electric">Trust LeadBryte</span></h2>
+                        <p class="text-slate-light text-lg mb-10 leading-relaxed">
+                            We don't just provide services; we build technical foundations that empower businesses to
+                            disrupt their industries. Our approach combines military-grade security with agile delivery.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-1">99.9% Uptime Guarantee</h4>
+                                    <p class="text-slate-light text-sm">Resilient infrastructure designed for continuous
+                                        business operations.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-1">Global Standard Security</h4>
+                                    <p class="text-slate-light text-sm">Compliance-ready solutions meeting international
+                                        data protection standards.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-electric/20 flex items-center justify-center text-electric shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl mb-1">24/7 Proactive Support</h4>
+                                    <p class="text-slate-light text-sm">Our engineering team is always on standby to
+                                        ensure your systems never sleep.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div
+                            class="aspect-square rounded-3xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                alt="Team working" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating Stats -->
+                        <div class="absolute -bottom-10 -left-10 glass p-8 rounded-2xl shadow-glow hidden md:block reveal"
+                            style="transition-delay: 400ms;">
+                            <div class="text-4xl font-bold text-electric mb-1">100+</div>
+                            <div class="text-slate-light text-sm font-bold uppercase tracking-widest">Projects Delivered
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="py-16 bg-navy-light/30 border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-header text-3xl md:text-4xl font-bold mb-4">Our Work in Action</h2>
+                <p class="text-slate-light max-w-2xl mx-auto">Visualizing our commitment to excellence through our
+                    projects.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="relative group overflow-hidden rounded-2xl h-64 reveal">
+                    <img src="images/date center setup.png" alt="Server Room"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-lg border-b-2 border-electric pb-1">Server
+                            Infrastructure</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative group overflow-hidden rounded-2xl h-64 reveal" style="transition-delay: 100ms;">
+                    <img src="images/software development.png" alt="Software Development"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-lg border-b-2 border-electric pb-1">Software
+                            Development</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="relative group overflow-hidden rounded-2xl h-64 reveal" style="transition-delay: 200ms;">
+                    <img src="images/cyber.jpg" alt="Cybersecurity"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-lg border-b-2 border-electric pb-1">Cybersecurity
+                            Systems</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="relative group overflow-hidden rounded-2xl h-64 reveal" style="transition-delay: 300ms;">
+                    <img src="images/it consulting.png" alt="IT Consulting"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-lg border-b-2 border-electric pb-1">Cloud
+                            Solutions</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="relative group overflow-hidden rounded-2xl h-64 reveal" style="transition-delay: 400ms;">
+                    <img src="images/cctv instalation.jpg" alt="CCTV Installation"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-lg border-b-2 border-electric pb-1">Hardware Setup</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="relative group overflow-hidden rounded-2xl h-64 reveal" style="transition-delay: 500ms;">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Consulting"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-lg border-b-2 border-electric pb-1">Strategic
+                            Consulting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24">
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <div class="max-w-3xl mx-auto reveal">
+                <h2 class="font-header text-4xl md:text-5xl font-bold mb-6">Ready to Scale Your Infrastructure?</h2>
+                <p class="text-slate-light text-xl mb-10">Our experts are ready to design a custom roadmap for your
+                    technical needs.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="about.html"
+                        class="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-10 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 backdrop-blur-sm">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark py-12 border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <img src="Company%20Logo.png" alt="LeadBryte Logo" class="h-20 w-auto object-contain">
+                    </a>
+                    <p class="text-slate-light max-w-sm">
+                        Be Smart, Think Different. Empowering businesses through innovative technology
+                        solutions and expert consulting.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-slate-light text-sm">
+                        <li><a href="services.html" class="hover:text-electric transition-colors">Services</a></li>
+                        <li><a href="about.html" class="hover:text-electric transition-colors">About Us</a></li>
+                        <li><a href="team.html" class="hover:text-electric transition-colors">Team</a></li>
+                        <li><a href="project.html" class="hover:text-electric transition-colors">Start a Project</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-slate-light text-sm">
+                        <li><a href="#" class="hover:text-electric transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-electric transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-electric transition-colors">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-light">
+                <p>&copy; 2026 LeadBryte Solutions. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container">
+        <!-- Chat Window -->
+        <div id="chat-window"
+            class="fixed bottom-24 right-6 w-80 md:w-96 bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 transform scale-0 origin-bottom-right h-[500px] z-[100]">
+            <!-- Header -->
+            <div class="bg-electric p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-sm">LeadBryte Assistant</h3>
+                        <p class="text-xs text-white/80">Online</p>
+                    </div>
+                </div>
+                <button id="close-chat" class="text-white hover:bg-white/10 rounded-lg p-1 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Messages Area -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 font-sans">
+                <!-- Bot Welcome Message -->
+                <div class="flex items-start gap-2 max-w-[85%]">
+                    <div
+                        class="w-8 h-8 bg-electric/20 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold text-electric">
+                        LB</div>
+                    <div class="bg-white/10 rounded-2xl rounded-tl-none p-3 text-sm text-slate-200">
+                        Hi there! 👋 I'm the LeadBryte virtual assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Area -->
+            <div class="p-4 border-t border-white/5 bg-navy/50">
+                <p class="text-xs text-center text-slate-500">Select an option above to chat</p>
+            </div>
+        </div>
+
+        <!-- Float Button -->
+        <button id="chatbot-toggle"
+            class="fixed bottom-6 right-6 w-14 h-14 bg-electric hover:bg-electric-hover text-white rounded-full shadow-lg shadow-electric/40 flex items-center justify-center transition-all hover:scale-110 active:scale-95 group z-[101]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 transition-transform group-hover:rotate-12"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
